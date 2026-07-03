@@ -28,7 +28,7 @@ The pin didn't count. The overclaim counts *against* — forever. That asymmetry
 
 ```bash
 git clone https://github.com/whitestone1121-web/receipt-gate-demo && cd receipt-gate-demo
-pip install "git+https://github.com/whitestone1121-web/signalbrain"
+pip install signalbrain
 
 # re-derive the ledger's verdicts yourself:
 sb score receipts/*.md --root . --ledger /tmp/fresh-ledger.jsonl --ref HEAD
