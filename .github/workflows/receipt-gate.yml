@@ -1,0 +1,13 @@
+name: receipt-gate
+on: [push, workflow_dispatch]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: whitestone1121-web/signalbrain@main
+        with:
+          receipts: "receipts/*.md"
+          ledger: ".signalbrain/ledger.jsonl"
+          merged-ref: "HEAD"
